@@ -45,7 +45,7 @@ Backend 중심 풀스택 개발자 지망생입니다.
 |------|------------|
 | **[SpeedNews](https://github.com/doHoaSen/SpeedNews)** | RSS 기반 실시간 뉴스 스트리밍 서비스 (SSE, JWT) |
 | **[FinTrack](https://github.com/doHoaSen/FinTrack)** | 소비 분석 & 목표 관리 서비스 |
-| **[CodingTestStudy](https://github.com/doHoaSen/CodingTestStudy)** | 코딩테스트 문제풀이 공부 |
+| **[StudyCodingTest](https://github.com/doHoaSen/StudyCodingTest)** | 코딩테스트 문제풀이 공부 |
 | **[CapstoneDesign](https://github.com/doHoaSen/CapstoneDesign)** | 교내 캡스톤 디자인: Minerrnoti |
 
 
