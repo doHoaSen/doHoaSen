@@ -60,6 +60,12 @@ function escapeXml(str) {
   return String(str).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 }
 
+function formatKst(date) {
+  const kst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${kst.getUTCFullYear()}.${pad(kst.getUTCMonth() + 1)}.${pad(kst.getUTCDate())} ${pad(kst.getUTCHours())}:${pad(kst.getUTCMinutes())} KST`;
+}
+
 function renderSvg({ today, total, current, longest, asOf }) {
   const W = 495;
   const H = 150;
@@ -126,7 +132,7 @@ async function main() {
   const total = cc.contributionCalendar.totalContributions;
   const today = days[days.length - 1]?.contributionCount ?? 0;
 
-  const asOf = new Date().toISOString().slice(0, 10).replace(/-/g, '.');
+  const asOf = formatKst(new Date());
   const svg = renderSvg({ today, total, current, longest, asOf });
 
   await writeFile(OUT_PATH, svg, 'utf8');
