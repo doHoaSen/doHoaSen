@@ -22,7 +22,16 @@ IT 서비스 기업에서 백엔드 인턴십을 경험했고, 이후로는 사�
 
 **Skills**
 
-<img src="https://skillicons.dev/icons?i=java,spring,ts,react,postgres,mysql,docker,githubactions" alt="Java, Spring Boot, TypeScript, React, PostgreSQL, MySQL, Docker, GitHub Actions" />
+<div align="center">
+<img src="https://skillicons.dev/icons?i=java" width="48" alt="Java" title="Java" />
+<img src="https://skillicons.dev/icons?i=spring" width="48" alt="Spring Boot" title="Spring Boot" />
+<img src="https://skillicons.dev/icons?i=ts" width="48" alt="TypeScript" title="TypeScript" />
+<img src="https://skillicons.dev/icons?i=react" width="48" alt="React" title="React" />
+<img src="https://skillicons.dev/icons?i=postgres" width="48" alt="PostgreSQL" title="PostgreSQL" />
+<img src="https://skillicons.dev/icons?i=mysql" width="48" alt="MySQL" title="MySQL" />
+<img src="https://skillicons.dev/icons?i=docker" width="48" alt="Docker" title="Docker" />
+<img src="https://skillicons.dev/icons?i=githubactions" width="48" alt="GitHub Actions" title="GitHub Actions" />
+</div>
 
 <br>
 
