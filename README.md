@@ -8,7 +8,7 @@
 
 작은 불편을 발견하고, 가장 효율적인 방식으로 해결합니다.
 
-Portfolio <a href="https://dohoasen.github.io"><img src="./assets/link-arrow.png" width="11" alt="↗" /></a>　·　Velog <a href="https://velog.io/@tnfdus/posts"><img src="./assets/link-arrow.png" width="11" alt="↗" /></a>
+doHoaSen.dev <a href="https://dohoasen.github.io"><img src="./assets/link-arrow.png" width="11" alt="↗" /></a>　·　Velog <a href="https://velog.io/@tnfdus/posts"><img src="./assets/link-arrow.png" width="11" alt="↗" /></a>
 
 </div>
 
