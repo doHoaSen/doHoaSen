@@ -55,5 +55,5 @@ IT 서비스 기업에서 백엔드 인턴십을 경험했고, 이후로는 사�
 <br>
 
 <div align="center">
-<img src="https://streak-stats.demolab.com/?user=doHoaSen&background=ffffff&border=d9d9d9&stroke=1a1a1a&ring=1a1a1a&fire=1a1a1a&currStreakLabel=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&sideLabels=6b6862&dates=6b6862&border_radius=0" alt="GitHub Streak" />
+<img src="./assets/streak-stub.svg" alt="Contribution Slip — GitHub 기여 통계" />
 </div>
