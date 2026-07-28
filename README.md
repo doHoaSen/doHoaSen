@@ -1,59 +1,50 @@
-# 👋 Hi, I'm doHoaSen (강수연)
-Backend 중심 풀스택 개발자 지망생입니다.  
-서비스가 **동작하는 이유**를 이해하고,  
-문제 해결 과정을 **코드로 설명할 수 있는 개발자**를 목표로 하고 있습니다.
+<div align="center">
+<img src="./assets/table-for-one.png" width="260" alt="Table for One — Self Introduction Slip" />
+</div>
+
+<div align="center">
+
+### Kang Suyeon · Backend Developer
+
+작은 불편을 발견하고, 가장 효율적인 방식으로 해결합니다.
+
+[Portfolio](https://dohoasen.github.io) · [Velog](https://velog.io/@tnfdus/posts)
+
+</div>
 
 <br>
 
-## 🧑‍💻 About Me
-
-### 🌱 Currently
-- Java 기반 **코딩테스트 & 자료구조/알고리즘** 학습 중
-- Spring Boot+React로 **실제 서비스 개발 경험** 축적 중
-
-### 🔍 Interested In
-- Backend Development
-- Data-driven Services
-- Clean Architecture & API Design
-
-### ✨ Value
-- “왜 이렇게 설계했는가?”를 설명할 수 있는 코드
-- 기록을 통해 성장하는 개발 문화
+서비스가 동작하는 이유를 이해하고, 문제 해결 과정을 코드로 설명할 수 있는 개발자를 목표로 합니다.
+백엔드를 중심으로 서비스 전반을 이해하는 풀스택 개발자로 성장하는 중입니다.
+IT 서비스 기업에서 백엔드 인턴십을 경험했고, 이후로는 사이드 프로젝트로 실력을 쌓고 있습니다.
 
 <br>
 
-## 🛠 Tech Stack
+**Skills**
 
-### 🔧 Languages & Frameworks
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
-
-### 🗄 Database & Infra
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-
+<img src="https://skillicons.dev/icons?i=java,spring,ts,react,postgres,mysql,docker,githubactions" alt="Java, Spring Boot, TypeScript, React, PostgreSQL, MySQL, Docker, GitHub Actions" />
 
 <br>
 
-## 🚀 Projects
+**Projects**
 
-| Project | Description |
-|------|------------|
-| **[SpeedNews](https://github.com/doHoaSen/SpeedNews)** | RSS 기반 실시간 뉴스 스트리밍 서비스 (SSE, JWT) |
-| **[FinTrack](https://github.com/doHoaSen/FinTrack)** | 소비 분석 & 목표 관리 서비스 |
-| **[StudyCodingTest](https://github.com/doHoaSen/StudyCodingTest)** | 코딩테스트 문제풀이 공부 |
-| **[CapstoneDesign](https://github.com/doHoaSen/CapstoneDesign)** | 교내 캡스톤 디자인: Minerrnoti |
+- **[FinTrack](https://github.com/doHoaSen/FinTrack)** — 소비 통계·개인화 피드백·목표 관리를 대시보드 API 하나로 통합 제공하는 가계부 백엔드
+- **[SpeedNews](https://github.com/doHoaSen/SpeedNews)** — 여러 언론사 RSS를 SSE로 실시간 스트리밍하는 뉴스 서비스
+- **[Velog Series Stats](https://github.com/doHoaSen/Velog-Series-Stats)** — Velog 시리즈별 조회수를 집계해주는 크롬 확장 프로그램
+- **[MCP JobSearch](https://github.com/doHoaSen/MCP_JobSearch)** — 채용 공고 수집·분석·자기소개서 초안까지 관리하는 개인용 MCP 서버
 
-
-👉 자세한 내용은 각 레포지토리 README 참고
-
+더 많은 프로젝트는 **[Projects Archive](https://dohoasen.github.io/projects)** 에서 볼 수 있어요.
 
 <br>
 
-## ✍️ Writing & 기록
-📘 **Velog**  
-https://velog.io/@tnfdus/posts  
+**Writing**
+
+프로젝트를 만들다 막히거나 새로 알게 된 것들을 Velog에 정리합니다.
+
+📘 [velog.io/@tnfdus](https://velog.io/@tnfdus/posts)
+
+<br>
+
+<div align="center">
+<img src="https://streak-stats.demolab.com/?user=doHoaSen&background=ffffff&border=d9d9d9&stroke=1a1a1a&ring=1a1a1a&fire=1a1a1a&currStreakLabel=1a1a1a&currStreakNum=1a1a1a&sideNums=1a1a1a&sideLabels=6b6862&dates=6b6862&border_radius=0" alt="GitHub Streak" />
+</div>
