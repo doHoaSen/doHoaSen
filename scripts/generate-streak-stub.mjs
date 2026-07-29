@@ -37,6 +37,62 @@ query($login: String!) {
   }
 }`;
 
+// GitHub의 contributionCalendar는 UTC 날짜 단위로만 집계되어(GraphQL from/to를 줘도
+// 서브데이 필터링이 되지 않음) KST 자정 기준 "오늘"을 정확히 구할 수 없다.
+// 대신 실제 타임스탬프가 있는 공개 이벤트(Events API)를 KST 자정 이후로 걸러서 센다.
+function kstMidnightUTC() {
+  const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
+  const kstNow = new Date(Date.now() + KST_OFFSET_MS);
+  const y = kstNow.getUTCFullYear();
+  const m = kstNow.getUTCMonth();
+  const d = kstNow.getUTCDate();
+  return new Date(Date.UTC(y, m, d, 0, 0, 0) - KST_OFFSET_MS);
+}
+
+async function countPushCommits(token, event) {
+  const { before, head } = event.payload;
+  if (!before || !head || /^0+$/.test(before)) return 1;
+  const res = await fetch(
+    `https://api.github.com/repos/${event.repo.name}/compare/${before}...${head}`,
+    { headers: { Authorization: `bearer ${token}`, Accept: 'application/vnd.github+json' } }
+  );
+  if (!res.ok) return 1;
+  const data = await res.json();
+  return typeof data.ahead_by === 'number' ? data.ahead_by : 1;
+}
+
+async function fetchTodayCount(token, since) {
+  const headers = { Authorization: `bearer ${token}`, Accept: 'application/vnd.github+json' };
+  const events = [];
+  for (let page = 1; page <= 3; page++) {
+    const res = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=100&page=${page}`,
+      { headers }
+    );
+    if (!res.ok) throw new Error(`이벤트 조회 실패: ${res.status} ${await res.text()}`);
+    const batch = await res.json();
+    events.push(...batch);
+    const oldest = batch[batch.length - 1];
+    if (batch.length < 100 || !oldest || new Date(oldest.created_at) < since) break;
+  }
+
+  const todays = events.filter((e) => new Date(e.created_at) >= since);
+
+  let count = 0;
+  for (const e of todays) {
+    if (e.type === 'PushEvent') {
+      count += await countPushCommits(token, e);
+    } else if (e.type === 'PullRequestEvent' && e.payload.action === 'opened') {
+      count += 1;
+    } else if (e.type === 'IssuesEvent' && e.payload.action === 'opened') {
+      count += 1;
+    } else if (e.type === 'PullRequestReviewEvent' && e.payload.action === 'created') {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 function computeStreaks(days) {
   let longest = 0;
   let run = 0;
@@ -130,7 +186,7 @@ async function main() {
   const days = cc.contributionCalendar.weeks.flatMap((w) => w.contributionDays);
   const { current, longest } = computeStreaks(days);
   const total = cc.contributionCalendar.totalContributions;
-  const today = days[days.length - 1]?.contributionCount ?? 0;
+  const today = await fetchTodayCount(token, kstMidnightUTC());
 
   const asOf = formatKst(new Date());
   const svg = renderSvg({ today, total, current, longest, asOf });
