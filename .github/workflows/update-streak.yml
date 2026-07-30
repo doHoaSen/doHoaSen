@@ -20,7 +20,7 @@ jobs:
 
       - run: node scripts/generate-streak-stub.mjs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
       - run: |
           if ! git diff --quiet -- assets/streak-stub.svg; then
